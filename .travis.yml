@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
+install: true
+script: true
 deploy:
   provider: script
   script: sshpass -p kuaile1, scp -P 29134 -o stricthostkeychecking=no -r ./src/* root@117.48.209.175:/root/html/
