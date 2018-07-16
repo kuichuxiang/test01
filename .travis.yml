@@ -6,6 +6,7 @@ cache:
     - "node_modules"
 install:
   - echo $rsync_password2 > rsyncd.passwd
+  - npm run build
 script: true
 deploy:
   provider: script
