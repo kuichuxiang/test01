@@ -5,8 +5,8 @@ cache:
   directories:
     - "node_modules"
 install:
-  - echo $rsync_password
-  - echo $rsync_password > a.passwd
+  - echo $rsync_password2
+  - echo $rsync_password2 > a.passwd
 script: true
 deploy:
   provider: script
