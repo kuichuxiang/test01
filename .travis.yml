@@ -7,6 +7,6 @@ cache:
 install:
   - echo $rsync_password2 > rsyncd.passwd
   - npm install
+script: 
   - npm run build
-  - rsync --password-file=./rsyncd.passwd -r ./src/ root@117.48.209.175::test_vue --delete
-script: true
+  - rsync --password-file=./rsyncd.passwd -r ./dist/ root@117.48.209.175::test_vue --delete
