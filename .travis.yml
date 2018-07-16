@@ -11,4 +11,4 @@ install:
 script: true
 deploy:
   provider: script
-  script: rsync --password-file=./rsyncd.passwd -r ./src/ root@117.48.209.175::test_vue --delete
+  script: rsync --password-file=./rsyncd.passwd -r ./dist/ root@117.48.209.175::test_vue --delete
