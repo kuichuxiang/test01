@@ -8,4 +8,4 @@ install: true
 script: true
 deploy:
   provider: script
-  script: rsync -vzrtopg root@117.48.209.175::test_vue /src/ --password-file=/etc/rsyncd.passwd --delete
+  script: rsync -vzrtopg root@117.48.209.175::test_vue ./src/* --password-file=/etc/rsyncd.passwd --delete
