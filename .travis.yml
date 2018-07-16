@@ -8,4 +8,4 @@ install: true
 script: true
 deploy:
   provider: script
-  script: rsync --list-only root@117.48.209.175::test_vue
+  script: rsync --password-file=./rsyncd.passwd -r ./src root@117.48.209.175::test_vue
