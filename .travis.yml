@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "7"
+  - "8"
 cache:
   directories:
     - "node_modules"
@@ -8,4 +8,6 @@ install: true
 script: true
 deploy:
   provider: script
-  script: rsync --password-file=./rsyncd.passwd -r ./src/ root@117.48.209.175::test_vue
+  script:
+    - echo $rsync_password > rsyncd.passwd
+    - rsync --password-file=./rsyncd.passwd -r ./src/ root@117.48.209.175::test_vue
