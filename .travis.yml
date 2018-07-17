@@ -9,4 +9,4 @@ install:
   - npm install
 script: 
   - npm run build
-  - rsync --password-file=./rsyncd.passwd -r ./dist/ root@117.48.209.175::test_vue --delete
+  - rsync -r ./dist/ root@117.48.209.175::test_vue --delete
