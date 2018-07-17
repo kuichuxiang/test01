@@ -6,7 +6,6 @@ cache:
     - "node_modules"
 install:
   - echo $rsync_password > rsyncd.passwd
-  - chown root:root rsyncd.passwd
   - chmod 600 rsyncd.passwd
   - npm install
 script: 
