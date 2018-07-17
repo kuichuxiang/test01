@@ -1,6 +1,6 @@
 language: node_js
 conditions: v1
-if: (branch = master) ADN (tag = true)
+if: tag = true
 node_js:
   - "8"
 cache:
