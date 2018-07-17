@@ -1,6 +1,7 @@
 <template>
     <div>
         <p>
+            123
             a: {{a}}
             <br>
             <button @click="a++">add</button>
