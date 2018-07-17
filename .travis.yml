@@ -5,7 +5,9 @@ cache:
   directories:
     - "node_modules"
 install:
-  - echo $rsync_password2 > rsyncd.passwd
+  - echo $rsync_password > rsyncd.passwd
+  - chown root:root rsyncd.passwd
+  - chmod 600 rsyncd.passwd
   - npm install
 script: 
   - npm run build
